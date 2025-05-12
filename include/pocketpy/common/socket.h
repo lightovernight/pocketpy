@@ -1,16 +1,17 @@
 #pragma once
 #include "pocketpy/export.h"
+#include <stdint.h>
 
-typedef void* socket_handler;
 
 #define INVALID_SOCKET_HANDLER (void*)(uintptr_t)(-1)
 
-enum address_family{
-    AF_INET = 2
+typedef void* socket_handler;
+enum pk_address_family{
+    PK_AF_INET = 2
 };
 
-enum socket_kind {
-    SOCK_STREAM = 1
+enum pk_socket_kind {
+    PK_SOCK_STREAM = 1
 };
 
 PK_API int socket_init();
